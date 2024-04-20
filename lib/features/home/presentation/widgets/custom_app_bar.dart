@@ -11,10 +11,12 @@ class CustomAppBar extends StatelessWidget {
     return const Row(
       children: [
         ProfileSection(),
-        SizedBox(width: 60),
-        ActionIcon(iconData: Icons.search_rounded),
+        SizedBox(width: 80),
+        ActionIcon(assetName: 'assets/images/search-line.svg'),
         SizedBox(width: 10),
-        ActionIcon(iconData: Icons.notifications_outlined),
+        ActionIcon(
+          assetName: 'assets/images/notification-4-line.svg',
+        ),
       ],
     );
   }
