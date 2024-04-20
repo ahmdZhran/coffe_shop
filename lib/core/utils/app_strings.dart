@@ -61,5 +61,8 @@ abstract class AppStrings {
       carName = "Card Holder name",
       cardNumber = "Card Number",
       expiry = "Expiry",
-      cvv = "CVV";
+      cvv = "CVV",
+
+      //font family name
+    poppinsFamily = 'Poppins';
 }

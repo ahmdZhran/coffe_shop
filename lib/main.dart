@@ -1,3 +1,4 @@
+import 'package:coffe_shop_app/core/utils/app_colors.dart';
 import 'package:coffe_shop_app/features/onboarding/presentation/views/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,11 @@ class CoffeScript extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Coffe Scritp',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: AppColors.backgroundColor,
         useMaterial3: true,
       ),
       home: const OnboardingView(),
