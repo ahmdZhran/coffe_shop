@@ -1,5 +1,6 @@
 import 'package:coffe_shop_app/core/utils/app_colors.dart';
 import 'package:coffe_shop_app/core/utils/app_strings.dart';
+import 'package:coffe_shop_app/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -54,7 +55,13 @@ class SignInView extends StatelessWidget {
                     width: double.infinity,
                     height: 70,
                     text: 'Sign In',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const HomeView();
+                        },
+                      ));
+                    },
                     fontColor: AppColors.backgroundColor,
                   ),
                   const SizedBox(height: 20),

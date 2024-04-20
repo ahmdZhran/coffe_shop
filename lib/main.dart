@@ -17,16 +17,7 @@ class CoffeScript extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  OnboardingView(),
+      home: const OnboardingView(),
     );
-  }
-}
-
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
