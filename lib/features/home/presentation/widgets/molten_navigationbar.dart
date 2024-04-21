@@ -1,6 +1,5 @@
 import 'package:coffe_shop_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:molten_navigationbar_flutter/molten_navigationbar_flutter.dart';
 
 import '../view/home_view.dart';
@@ -9,11 +8,11 @@ class CustomMoltenNavigationBar extends StatefulWidget {
   const CustomMoltenNavigationBar({Key? key}) : super(key: key);
 
   @override
-  _CustomMoltenNavigationBarState createState() =>
-      _CustomMoltenNavigationBarState();
+  CustomMoltenNavigationBarState createState() =>
+      CustomMoltenNavigationBarState();
 }
 
-class _CustomMoltenNavigationBarState extends State<CustomMoltenNavigationBar> {
+class CustomMoltenNavigationBarState extends State<CustomMoltenNavigationBar> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
