@@ -20,77 +20,61 @@ class CoffeeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 20),
+    return Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              blurRadius: 5.0,
-              spreadRadius: 1.0,
-            )
-          ],
           color: AppColors.primaryColor,
         ),
-        child: Stack(
-          children: [
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 50),
-                child: Image.asset(assetName, height: 150.0),
+        child: Padding(
+          padding: const EdgeInsets.only(right: 10, left: 10),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Icon(
+                    Icons.favorite_outline,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-            Positioned(
-              bottom: 25.0,
-              left: 10.0,
-              child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: coffeeName,
-                      style: const TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+              SizedBox(
+                height: 100,
+                width: 100,
+                child: Image.asset(assetName),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        coffeeName,
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: description.isNotEmpty ? 20.0 : 20.0,
-              right: 10.0,
-              child: Text(
-                '\$${price.toStringAsFixed(2)}',
-                style: const TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.backgroundColor,
-                ),
-              ),
-            ),
-            const Positioned(
-              top: 10.0,
-              right: 10.0,
-              child: Icon(Icons.favorite_outline, color: Colors.red),
-            ),
-            Positioned(
-              bottom: 5.0,
-              left: 10.0,
-              child: Text(
-                description,
-                style: const TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.white70,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+                      Text(
+                        description,
+                        style: const TextStyle(
+                            color: AppColors.backgroundColor, fontSize: 10),
+                      ),
+                    ],
+                  ),
+                  const Text(
+                    '\$12',
+                    style: TextStyle(
+                        color: AppColors.backgroundColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }

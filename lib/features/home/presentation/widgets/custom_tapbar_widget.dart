@@ -30,7 +30,7 @@ class CustomTapBarWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 500,
+            height: 600,
             child: TabBarView(children: [
               CoffeeGrid(),
               Center(child: Text('Tab 2 Content')),
