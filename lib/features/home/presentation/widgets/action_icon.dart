@@ -9,11 +9,12 @@ class ActionIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 60),
-        child: SvgPicture.asset(
-          assetName,
-          height: 30,
-          width: 30,
-        ));
+      padding: const EdgeInsets.only(top: 60),
+      child: SvgPicture.asset(
+        assetName,
+        height: 30,
+        width: 30,
+      ),
+    );
   }
 }

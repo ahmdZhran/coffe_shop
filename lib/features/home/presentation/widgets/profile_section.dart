@@ -7,7 +7,7 @@ class ProfileSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 60, left: 20),
+      padding: EdgeInsets.only(top: 60),
       child: Row(
         children: [
           CircleAvatar(
