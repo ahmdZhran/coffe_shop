@@ -17,7 +17,7 @@ class SignInView extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'assets/images/image-10.png',
+            'assets/images/imageforlogin.png',
             fit: BoxFit.cover,
           ),
           Center(

@@ -6,16 +6,16 @@ class CoffeeCard extends StatelessWidget {
   final String assetName;
   final String coffeeName;
   final double price;
-  final String size; // Added field for size text
-  final String description; // Added field for description text
+  final String size;
+  final String description;
 
   const CoffeeCard({
     super.key,
     required this.assetName,
     required this.coffeeName,
     required this.price,
-    this.size = '', // Optional size text
-    this.description = '', // Optional description text
+    this.size = '',
+    this.description = '',
   });
 
   @override
