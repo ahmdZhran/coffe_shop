@@ -1,7 +1,5 @@
-import 'package:coffe_shop_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/utils/app_strings.dart';
+import '../widgets/body_of_customization_widget.dart';
 import '../widgets/head_of_customization_widget.dart';
 
 class CustomizationOrderView extends StatelessWidget {
@@ -9,23 +7,15 @@ class CustomizationOrderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
         children: [
-          const HeadOfCustomizationWidget(),
+          HeadOfCustomizationWidget(),
           Positioned(
             left: 0,
             right: 0,
             bottom: 0,
-            child: Container(
-              decoration: const BoxDecoration(
-                  color: AppColors.backgroundColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50),
-                  )),
-              height: 550,
-            ),
+            child: BodyOfCustomizationWidget(),
           ),
         ],
       ),
