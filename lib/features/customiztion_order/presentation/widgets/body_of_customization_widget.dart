@@ -1,8 +1,9 @@
 import 'package:coffe_shop_app/core/utils/app_strings.dart';
+import 'package:coffe_shop_app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../../../core/utils/app_colors.dart';
+import 'count_of_cub_widget.dart';
+import 'size_of_cub_widget.dart';
 
 class BodyOfCustomizationWidget extends StatelessWidget {
   const BodyOfCustomizationWidget({
@@ -12,7 +13,7 @@ class BodyOfCustomizationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 550,
+      height: 600,
       decoration: const BoxDecoration(
         color: AppColors.backgroundColor,
         borderRadius: BorderRadius.only(
@@ -52,18 +53,67 @@ class BodyOfCustomizationWidget extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Container(
-            height: 80,
-            width: 80,
-            decoration: BoxDecoration(
-              color: AppColors.primaryColor,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: SvgPicture.asset(
-              'assets/images/drinks-line.svg',
-              fit: BoxFit.contain,
+          const SizedBox(height: 60),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                SizeOfCubWidget(
+                  heightOfContaner: 66,
+                  widthOfContainer: 66,
+                  heightOfCub: 40,
+                  widthOfCub: 40,
+                  text: 'Small',
+                ),
+                SizedBox(width: 20),
+                SizeOfCubWidget(
+                  heightOfContaner: 94,
+                  widthOfContainer: 94,
+                  heightOfCub: 59,
+                  widthOfCub: 59,
+                  text: 'Meduim',
+                ),
+                SizedBox(width: 20),
+                SizeOfCubWidget(
+                  heightOfContaner: 122,
+                  widthOfContainer: 122,
+                  heightOfCub: 83,
+                  widthOfCub: 83,
+                  text: 'Large',
+                ),
+              ],
             ),
           ),
+          const CountOfCubWidget(),
+          const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  '\$20',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: CustomElevatedButton(
+                    height: 55,
+                    width: 300,
+                    onPressed: () {},
+                    text: AppStrings.addToCart,
+                    fontColor: AppColors.backgroundColor,
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

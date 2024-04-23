@@ -43,7 +43,7 @@ abstract class AppStrings {
       small = "Small",
       medium = "Medium",
       large = "Large",
-      addToCart = "AddToCart",
+      addToCart = "Add To Cart",
       cart = "Cart",
       myOrder = "My Order",
       apply = "Apply",
@@ -64,5 +64,5 @@ abstract class AppStrings {
       cvv = "CVV",
 
       //font family name
-    poppinsFamily = 'Poppins';
+      poppinsFamily = 'Poppins';
 }
